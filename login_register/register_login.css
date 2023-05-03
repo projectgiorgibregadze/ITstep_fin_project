@@ -1,142 +1,97 @@
-/* მარტივი გასტილვები  */
-body{
+/* ჩვეულებრივი სახის გასტილვა  საიტისვითვის */
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-    background-image: url(background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+#Title {
+  text-align: center;
+  font-family: sans-serif;
+  cursor: default;
 }
-/* სათაურის გასტილვა */
-#Title{
-    text-align: center;
-    font-family: sans-serif;
+#Titlepart {
+  color: #ff4a22;
 }
-#Titlepart{
-    color: #FF4A22;
-}
-/* ორი მთავარი დივის გასტილვა */
+
 #main_div {
-    width: 400px;
-    margin: 0 auto;
-    border-radius: 13px;
-    padding: 20px;
-    background-color: #f2f2f2;
-}
-#second_div{
-    width: 300px;
-    margin: 0 auto;
-    padding: 10px;
-    padding-bottom: 32px;
-    background-color: #FF4A22;
-    border-radius: 13px;
-}
-/* მათი შიდა წევრების გასტილვა */
-#second_div h2{
-    color: #ccc;
-    text-align: center;
-    margin-top: 30px;
-    font-family: sans-serif;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 13px;
+  padding: 20px;
+  background-color: #f2f2f2;
 }
 
-input{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+#second_div {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-bottom: 18px;
+  background-color: #ff4a22;
+  border-radius: 13px;
+  display: flex;
+  cursor: pointer;
 }
 
-button{
-    background-color: #FF4A22;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+#second_div h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 33px;
+  font-family: sans-serif;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ff4a22;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
 }
 
 a {
-    color: blue;
-}
-i{
-    font-size: 40px;
-    color: #f2f2f2;
-    animation-name: cakemove;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ff4a22;
+  font-family: sans-serif;
 }
 
-
-/* ანიმაციები */
-@keyframes cakemove{
-    0%{
-        padding-left: 0px;
-        transform:  rotate(0deg);
-        
-    }
-    50%{
-        padding-left: 90%;
-        transform: translateX(0) rotate(360deg);
-    }
-    100%{
-        padding-left: 0px;
-        transform: translateX(0) rotate(0deg);
-    }
+i {
+  font-size: 30px;
+  color: #f2f2f2;
+  animation-name: cakemove;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  margin-top: 26px;
 }
 
-/* რესპონსივზე პასუხისმგებელი */
-@media screen and (min-width: 681px) {
-    #main_div {
-        width: 90%;
-    }
-    #forgotorsignup{
-        padding-left: 40%;
-    }
+i:first-child {
+  margin-left: 79px;
 }
-@media screen and (max-width: 681px) {
-    
-    #forgotorsignup{
-        padding-left: 40%;
-    }
-}
-@media screen and (max-width: 576px) {
-    #main_div {
-        width: 100%;
-        padding: 10px;
-    }
+/* რესპონსივის გასტილვა */
+@media only screen and (max-width: 600px) {
+  #main_div {
+    width: 90%;
+  }
 
-    input {
-        width: 100%;
-        font-size: 18px;
-    }
+  #second_div {
+    width: 90%;
+  }
 
-    button{
-        width: 100%;
-        font-size: 18px;
-    }
-    #forgotorsignup{
-        padding-left: 50%;
-    }
-    
-}
-@media screen and (min-width: 768px) {
-    #main_div {
-        width: 50%;
-    }
-
-    input {
-        width: 100%;
-        font-size: 20px;
-    }
-
-    button{
-        width: 100%;
-        font-size: 20px;
-    }
-    #forgotorsignup{
-        padding-left: 40%;
-    }
+  #second_div h2 {
+    margin-top: 20px;
+  }
 }
