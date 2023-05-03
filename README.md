@@ -2,9 +2,9 @@
 Final project for ItStep
 
 # Extensions that i use 
-1.Prettier-code formatter
-2.jQuery Code Snippets
-3.Live Server
+1. Prettier-code formatter
+2. jQuery Code Snippets
+3. Live Server
 
 # Code source
 1. არ ვიყენებ არავის კოდს
