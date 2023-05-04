@@ -8,8 +8,6 @@ body {
   background-image: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-
-  background-color: #fff;
   font-family: Arial, sans-serif;
   color: #333;
 }
@@ -65,8 +63,9 @@ body {
 }
 
 #second_div {
+  display: flex;
   margin: 30px auto;
-  width: 300px;
+  width: 350px;
   text-align: center;
   background-color: #ff4a22;
   padding: 15px;
@@ -81,7 +80,7 @@ body {
 
 .fa-cake-candles {
   font-size: 33px;
-  margin: 0 10px;
+  margin: 0 auto;
 }
 
 @keyframes bounce {
