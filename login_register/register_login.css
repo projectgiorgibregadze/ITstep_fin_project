@@ -1,97 +1,126 @@
-/* ჩვეულებრივი სახის გასტილვა  საიტისვითვის */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
+
 
 #Title {
   text-align: center;
-  font-family: sans-serif;
-  cursor: default;
+  font-size: 3em;
+  margin-top: 1em;
 }
+
 #Titlepart {
   color: #ff4a22;
 }
 
 #main_div {
-  width: 400px;
-  margin: 0 auto;
-  border-radius: 13px;
-  padding: 20px;
-  background-color: #f2f2f2;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+#Emailplace,
+#passplace {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#forgot {
+  color: #ff4a22;
+  text-align: right;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#button {
+  background-color: #ff4a22;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 #second_div {
+  margin: 30px auto;
   width: 300px;
-  margin: 0 auto;
-  padding: 10px;
-  padding-bottom: 18px;
+  text-align: center;
   background-color: #ff4a22;
-  border-radius: 13px;
-  display: flex;
-  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
 }
 
 #second_div h2 {
-  color: #fff;
-  text-align: center;
-  margin-top: 33px;
-  font-family: sans-serif;
+  margin: 0;
+  font-size: 36px;
 }
 
-input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.fa-cake-candles {
+  font-size: 33px;
+  margin: 0 10px;
 }
 
-button {
-  background-color: #ff4a22;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-a {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
-  color: #ff4a22;
-  font-family: sans-serif;
-}
+@media only screen and (max-width: 767px) {
+  #Title {
+    font-size: 32px;
+    margin: 20px 0;
+  }
 
-i {
-  font-size: 30px;
-  color: #f2f2f2;
-  animation-name: cakemove;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  margin-top: 26px;
-}
-
-i:first-child {
-  margin-left: 79px;
-}
-/* რესპონსივის გასტილვა */
-@media only screen and (max-width: 600px) {
   #main_div {
-    width: 90%;
+    padding: 10px;
   }
 
-  #second_div {
-    width: 90%;
+  #br1,
+  #br2,
+  #br3 {
+    display: block;
   }
+}
 
-  #second_div h2 {
-    margin-top: 20px;
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #main_div {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #main_div {
+    max-width: 800px;
   }
 }
