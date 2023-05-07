@@ -3,15 +3,24 @@
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  height: 100%;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-image: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
   color: #333;
 }
-
 
 #Title {
   text-align: center;
@@ -34,7 +43,8 @@ body {
 }
 
 #Emailplace,
-#passplace {
+#passplace,
+#passplace2 {
   width: 100%;
   padding: 1em;
   margin-bottom: 1em;
@@ -45,7 +55,7 @@ body {
 
 #forgot {
   color: #ff4a22;
-  text-align: right;
+  width: 100px;
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
