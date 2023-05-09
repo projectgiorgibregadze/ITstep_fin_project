@@ -52,6 +52,31 @@ body {
   border-radius: 5px;
   border: 1px solid #ddd;
 }
+#Errordiv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ff4a22;
+  color: #ff4a22;
+  padding: 60px 100px;
+  border-radius: 5px;
+}
+#errortext {
+  display: block;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+.display {
+  display: none;
+}
+
+.slide-out {
+  display: block;
+  animation: slideout 0.5s ease-in-out forwards;
+}
 
 #forgot {
   color: #ff4a22;
@@ -93,6 +118,15 @@ body {
   margin: 0 auto;
 }
 
+@keyframes slideout {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -200%);
+  }
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -120,16 +154,34 @@ body {
   #br3 {
     display: block;
   }
+  #Errordiv {
+    padding: 20px 20px;
+  }
+  #errortext {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   #main_div {
     max-width: 600px;
   }
+  #Errordiv {
+    padding: 20px 80px;
+  }
+  #errortext {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   #main_div {
     max-width: 800px;
+  }
+  #Errordiv {
+    padding: 30px 100px;
+  }
+  #errortext {
+    font-size: 30px;
   }
 }
