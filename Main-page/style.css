@@ -5,14 +5,68 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
+}
+#mainbodypart1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#leftpart {
+  float: left;
+}
+#rightpart {
+  float: right;
+}
+#leftpartcontent {
+  width: 460px;
+  text-align: left;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+#leftpartcontent h1 {
+  font-size: 38px;
+}
+#leftpartcontent p {
+  color: #12103dc3;
+  padding-bottom: 10px;
+}
+#ordernow {
+  color: #ff4a22;
+  border: 1px solid #ff4a22;
+  padding: 10px 25px;
+  border-radius: 150px;
+  background-color: #ff4a22;
+  color: #fff;
+  text-decoration: none;
+}
+#joinres {
+  color: #ff4a22;
+  border: 1px solid #ff4a22;
+  padding: 10px 25px;
+  border-radius: 150px;
+  background-color: #ff4a223f;
+  text-decoration: none;
+  margin-left: 20px;
 }
 #titlecolor {
   color: #ff4a22;
 }
-
+.textalign {
+  text-align: center;
+}
+#imageofleftcont2 {
+  width: 351px;
+  height: 442px;
+  border-radius: 16px;
+  border: 0.2px solid rgba(128, 128, 128, 0.465);
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -20,7 +74,7 @@ nav {
 }
 
 nav a {
-  margin-left: 1rem;
+  margin-left: 1.6rem;
   text-decoration: none;
   color: #333;
 }
@@ -29,9 +83,67 @@ nav a:first-child {
 }
 
 nav a:hover {
+  color: #ff4a22;
+}
+nav a:first-child:hover {
   color: #000;
 }
+nav i {
+  margin-left: 2.6rem;
+  font-size: 25px;
+}
+.navlasta {
+  color: #ff4a22;
+  border: 1px solid #ff4a22;
+  padding: 10px 25px;
+  border-radius: 150px;
+}
+#rightpartcontent {
+  display: flex;
+  width: 600px;
 
+  overflow: hidden;
+}
+#contentimg {
+  position: relative;
+  z-index: 13;
+  width: 800px;
+  height: 400px;
+  justify-content: space-between;
+}
+#rightpartcontent img {
+  border-radius: 16px;
+  height: 351px;
+  width: 200px;
+}
+#rightpartcontent img:first-child {
+  position: absolute;
+  left: -10%;
+}
+#cake2 {
+  position: absolute;
+  left: 50%;
+}
+#rightpartcontent img:last-child {
+  position: absolute;
+  right: -10%;
+}
+
+@media screen and (max-width: 350px) {
+  nav i {
+    margin-left: 1.3rem;
+    font-size: 20px;
+  }
+  nav a:first-child {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 510px) {
+  nav i {
+    margin-left: 2.4rem;
+    font-size: 20px;
+  }
+}
 @media (max-width: 600px) {
   .header-inner {
     flex-direction: column;
@@ -49,5 +161,30 @@ nav a:hover {
   nav a {
     display: block;
     margin: 0.5rem 0;
+  }
+  #mainbodypart1 {
+    width: 280px;
+  }
+  #leftpartcontent h1 {
+    font-size: 18px;
+  }
+  #leftpartcontent p {
+    font-size: 10px;
+  }
+  #mainbodypart1 {
+    align-items: left;
+    margin: 0 0px;
+    padding: 0px;
+  }
+  #leftpartcontent {
+    width: 260px;
+    text-align: left;
+    font-family: sans-serif;
+  }
+  #ordernow {
+    padding: 8px 15px;
+  }
+  #joinres {
+    padding: 8px 15px;
   }
 }

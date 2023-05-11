@@ -1,17 +1,16 @@
 {
-    "users": [
-      {
-        "mail": "example@gmail.com",
-        "password": "password1"
-      },
-      {
-        "mail": "user2",
-        "password": "password2"
-      },
-      {
-        "mail": "user3",
-        "password": "password3"
-      }
-    ]
+  "users": [
+    {
+      "mail": "example@gmail.com",
+      "password": "password1"
+    },
+    {
+      "mail": "user2",
+      "password": "password2"
+    },
+    {
+      "mail": "user3",
+      "password": "password3"
+    }
+  ]
 }
-  
