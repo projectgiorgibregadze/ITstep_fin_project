@@ -58,8 +58,9 @@ $("#button").click(function (event) {
     })
       .then((response) => response.json())
       .then((response) =>{
+        var user= response
         var id = response.id
-        console.log(id)
+        localStorage.setItem('user', response)
         localStorage.setItem('userid', id)
         window.location.href = "/Main-page/index.html"
       });

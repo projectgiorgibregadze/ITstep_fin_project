@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+    src="https://kit.fontawesome.com/c962c8c1be.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 id="Title"><span id="titlecolor">Ramen</span>.Kuy</h1>
+      <nav>
+        <a href="/Main-page/index.html" id="homenav">Home</a>
+        <a href="/Main-page/add/howtoorder/howord.html" id="tutornav">How to Order</a>
+        <a href="/Main-page/add/menu/menu.html" id="menunav">Our Menu</a>
+        <a href="/Main-page/add/recieps/main.html" id="recipenav">Our Recipes</a>
+        <a href="/Main-page/add/subscirbe/index.html" id="contactnav">Contact Us</a>
+        <a href="/Main-page/add/subscirbe/index.html" id="subnav" class="navlasta">Subscribe</a>
+      </nav>
+    </div>
+</header>
+  <main>
+
+    <div class="subscribe-section">
+      <h2 class="subscribe-text">Subscribe to see Our Recipes</h2>
+      <div class="card-inputs">
+        <div class="card-input">
+          <label for="cardholder-name">Cardholder Name</label>
+          <input type="text" id="cardholder-name" placeholder="Enter your name">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" placeholder="Enter card number">
+          <div class="expiry-cvv">
+            <div>
+              <label for="expiration-month">Expiration Month</label>
+              <select id="expiration-month">
+                <option value="">Select month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div>
+              <label for="expiration-year">Expiration Year</label>
+              <select id="expiration-year">
+                <option value="">Select year</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+          </div>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="Enter CVV">
+          <input type="submit" value="Submit">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

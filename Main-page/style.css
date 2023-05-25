@@ -3,9 +3,10 @@ body {
   font-family: sans-serif;
   margin: 0px;
   width: 100vw;
-  max-width: 1400px;
+  max-width: 1500px;
   overflow-x: hidden;
   font-family: sans-serif;
+  cursor: default;
 }
 .header-inner {
   display: flex;
@@ -115,7 +116,7 @@ nav i {
   border-radius: 16px;
   position: relative;
   z-index: 13;
-  width: 900px;
+  width: 700px;
   height: 400px;
   justify-content: space-between;
 }
@@ -124,7 +125,7 @@ nav i {
   height: 401px;
   width: 260px;
 }
-#rightpartcontent img:first-child {
+#cake1 {
   position: absolute;
   left: -10%;
 }
@@ -132,8 +133,11 @@ nav i {
   position: absolute;
   left: 37%;
 }
+#girl{
+  border-radius: 16px;
+}
 
-#rightpartcontent img:last-child {
+#cake3{
   position: absolute;
   right: -18%;
 }
@@ -226,7 +230,7 @@ nav i {
 
 }
 .cardlaptop {
-  margin-left: 5px;
+  margin-left: 22px;
 float: left;
 
   border-radius: 16px;
@@ -301,7 +305,6 @@ float: left;
   position: relative;
   left: 280px;
   bottom: 30px;
-  border: 1px solid black;
   border-radius: 16px;
   background-color: #ff4a22;
   color: #fff;
@@ -310,13 +313,15 @@ float: left;
   width: 100px;
   height: 50px;
 }
+#addcart p{
+  padding-top: 17px;
+}
 #mainbodypart3 {
  
   display: flex;
   justify-content: center;
   margin: 0 auto;
   margin-top: 30px;
-  border: 1px solid black;
   height: 400px;
   max-width: 1300px;
   width: 100vw;
@@ -327,8 +332,8 @@ float: left;
 #part3cover {
   padding: 0px;
   margin: 0px;
- 
-  max-width: 1300px;
+ max-width: 1400px;
+
   height: 100%;
   width: 100%;
   max-height: 700px;
@@ -358,11 +363,10 @@ float: left;
   max-width: 1300px;
   margin: 0 auto;
   margin-top: 30px;
-  border: 1px solid black;
   height: 700px;
 }
 #sub{
-  border: 1px solid black;
+
   border-radius: 16px;
   position: relative;
   background-color: #ff4a22;
@@ -390,12 +394,11 @@ float: left;
 
 #leftside4{
   float: left;
-  border: 1px solid red;
   width: 454px;
   height: 518px;
   margin-left: 110px;
 }
-#leftside4 img{
+#girl{
   width: 454px;
   height: 518px;
 }
@@ -433,7 +436,7 @@ float: left;
 }
 #rightside4{
   float: left;
-  border: 1px solid black;
+
   width: 630px;
   height: 518px;
 }
@@ -448,7 +451,7 @@ float: left;
   height: 104px;
 }
 #textdiv4{
-  border: 1px solid green;
+
   float: left;
   width: 470px;
 }
@@ -524,7 +527,7 @@ ol{
 }
 #inputandcom{
   display: flex;
-  border: 1px solid black;
+
 }
 #comnumb{
   color: #3c3838;
@@ -546,11 +549,112 @@ bottom: 12px;
   right: 35px;
 }
 footer{
-  max-width:1400px;
+  margin: 0px auto;
+  max-width:1300px;
   background-color: #ff4a22;
+  height: 700px;
   max-height: 700px;
 }
-@media screen and (max-width: 390px) {
+#ragaca{
+  position: relative;
+  color: #fff;
+  left: 100px;
+  top: 130px;
+}
+#abaa{
+  max-width: 326px;
+  position: relative;
+  left: 100px;
+  font-weight: 400;
+  font-size: 15px;
+  top: 140px;
+  color: #fff;
+}
+#ramenkuylastdiv{
+  position: relative;
+  left: 45%;
+
+  max-width: 700px;
+  
+  max-height: 500px;
+}
+#firstcol{
+  max-height: 500px;
+  color: #fff;
+  float: left;
+  width: 120px;
+}
+#firstcol p{
+  font-weight: 700;
+}
+#firstcol a{
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  margin-right: 0;
+
+
+}
+#secondcol{
+  max-height: 500px;
+  color: #fff;
+  float: left;
+  width: 120px;
+  margin-left: 90px;
+}
+#secondcol p{
+  font-weight: 700;
+}
+#secondcol a{
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  margin-right: 0;
+
+
+}
+#thirdcol{
+  max-height: 500px;
+  color: #fff;
+  float: left;
+  width: 190px;
+  margin-left: 90px;
+}
+#serv{
+  font-weight: 700;
+}
+#thirdcol a{
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  margin-right: 0;
+
+
+}
+#icons2{
+  font-size: 30px;
+}
+
+#firstic{
+  margin-right: 10px;
+}
+#copyright{
+  font-size: 14px;
+
+}
+#abtdel{
+  margin-top:5px;
+}
+
+#subnav:hover{
+  color: #000;
+  border-color: black;
+}
+
+@media screen and (max-width: 490px) {
   body{
     margin: 0px;
   }
@@ -641,22 +745,36 @@ footer{
     padding: 8px 15px;
   }
 }
-@media screen and (max-width:800px){
-  #leftpartcontent{
-    margin-left: 30px;
-  }
-  
-  #titlepart2{
-    font-size: 20px;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-  #more8more{
-    float: right;
-    margin-top: 15px;
+#nextpic{
+  position: relative;
+
+  z-index: 102;
+  top: 390px;
+  left: 370px;
+}
+
+.orange{
+  color: #ff4a22;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    position: absolute;
+
+    right: 23vw; 
   }
 }
+
+@media screen and (max-width: 1441px) {
+ 
+    body{
+      position: static;
+      margin: 0px auto;
+
+}
+}
 @media screen and (max-width:1300px){
+  
   #cardmobile{
     margin: auto;
   }
@@ -667,6 +785,8 @@ footer{
   }
   #rightpartcontent img{
     width: 40vw;
+    position: relative;
+    left: 3vw;
   }
   #cake2{
     margin-left: 100px;
@@ -675,71 +795,216 @@ footer{
     height: 1300px;
   }
 }
-@media (max-width:768px) and (min-width:391px ){
-  #card img{
-    width: 300px;
-  }
-  #card2 img{
-    width: 300px;
-  }
-  #price img{
-    font-size: 20px;
-  }
-  #cakename{
-    font-size: 14px
-  }
-  #card3 img{
-    width: 300px;
-  }
-  #addcart{
+@media screen and (max-width:1200px){
+  #rightpartcontent img{
     position: relative;
-    left:180px;
-
+    left: 1vw;
   }
 }
-@media screen and (min-width: 1441px) {
-  body {
+@media screen and (max-width:1294px){
+  #emoji1{
     position: absolute;
-
-    right: 23vw;
-
-  
-   
+    right: 39vw;
   }
-}
-@media screen and (max-width: 2023px) {
-  body {
+  #emoji2{
     position: absolute;
-
-    right: 15vw;
-
-  
-   
+    right: 48vw;
   }
-}
-@media (max-width:1550px) and (max-width: 1640px) {
-  body {
+  #emoji3{
     position: absolute;
-
-    right: 10vw;
-
-  
-   
+    right: 43vw;
   }
 }
-@media screen and (max-width:1549px){
+@media screen and (max-width:1199px){
+  #mainbodypart4{
+    height: 1300px;
+  }
+  #leftside4{
+    display: inline;
+    margin-left: 12vw;
+  }
+  #rightside4{
+    display: inline;
+    margin-left: 22vw;
+  }
+}
+@media screen and (max-width:1165px){
+  #sub{
+    position: static;
+    margin: 0px auto;
+    margin-top: 24px;
+  }
+  #ragaca{
+    position: static;
+    color: #fff;
+    margin-left: 40vw;
+  }
+  #abaa{
+    max-width: 326px;
+    position: static;
+    font-weight: 400;
+    font-size: 15px;
+margin: 0px auto;
+    color: #fff;
+  }
+  #ramenkuylastdiv{
+    position: static;
+    margin: 0px auto;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width:815px){
+  #rightside4{
+    margin-left: 12vw;
+  }
+  #leftside4{
+    display: inline;
+    margin-left: 19vw;
+  }
+  #ramenkuylastdiv{
+    position: static;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width:652px){
+  #rightside4{
+    float: left;
+
+    width: 400px;
+    height: 518px;
+  }
+  #inputcom{
+    left: 190px;
+    bottom: 15px;
+  }
+  #plane{
+    left: 150px;
+    bottom: 11px;
+  }
+}
+@media screen and (max-width:490px){
+  #textdiv4{
+    margin-left: 10px;
+    width: 300px;
+    height: 600px;
+  }
+  #comnumb{
+    bottom: 126px;
+  }
+  #f1{
+    top: -80px;
+    left: 10px;
+  }
+  #f2{
+    top: -80px;
+    left: -12px;
+  }
+  #f3{
+    top: -80px;
+    left: -35px;
+  }
+  #f4{
+    top: -80px;
+    left: -59px;
+  }
+  #inputcom{
+    left: 50px;
+    bottom: 125px;
+  }
+  #plane{
+    left: 17px;
+    bottom: 122px;
+  }
+  #girl{
+    width:300px;
+    height: 400px;
+  }
+  #leftside4{
+    width:300px;
+    height: 400px;
+  }
+  #right2{
+   left: 235px;
+   bottom: 280px;
+  }
+  #left1{
+    bottom: 363px;
+    left: 5px;
+  }
+  #comment{
+    width: 300px;
+  }
+  #rightside4{
+    width: 300px;
+  }
+}
+@media screen and (max-width:721px){
+  #rightside4{
+    margin-left: 3vw;
+  }
+  #leftside4{
+    display: inline;
+    margin-left: 6vw;
+  }
+} 
+@media screen and (max-width:380px){
+#ragaca{
+  position: static;
+  margin-left: 80px;
+}
+#abaa{
+  position: static;
+  margin-left: 15px;
+}
+}
+@media screen and (max-width:372px ){
+  #firstcol{
+    display: inline-block;
+    position: static;
+    margin: 0px auto;
+  }
+  #secondcol{
+    position: static;
+    margin-left: 30px;
+  }
+  #thirdcol{
+    position: static;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width:2500px){
   body{
     position: static;
     margin: 0px auto;
   }
-}
-@media screen and (min-width: 2400px) {
-  body {
-    position: absolute;
-
-    right: 35%;
-
   
-   
+}
+
+@media screen and (max-width: 600px) {
+  .circle {
+    width: 60px;
+    height: 60px;
   }
+}
+@media screen and (max-width:1263px){
+  #nextpic{
+    left: 29vw;
+  }
+}
+
+@keyframes gacvla {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+.gacvla{
+  animation: gacvla 1s ease-in-out 1;
 }
