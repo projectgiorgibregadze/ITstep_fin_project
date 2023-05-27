@@ -982,9 +982,29 @@ margin: 0px auto;
 }
 
 @media screen and (max-width: 600px) {
-  .circle {
-    width: 60px;
-    height: 60px;
+ 
+  #card img{
+    width: 300px;
+  }
+  #card2 img{
+    width: 300px;
+  }
+  #price img{
+    font-size: 20px;
+  }
+  #cakename{
+    font-size: 14px
+  }
+  #card3 img{
+    width: 300px;
+  }
+  #addcart{
+    position: relative;
+    left:180px;
+
+  }
+  #sub{
+    margin-left: 35vw;
   }
 }
 @media screen and (max-width:1263px){
@@ -992,6 +1012,7 @@ margin: 0px auto;
     left: 29vw;
   }
 }
+
 
 @keyframes gacvla {
   0%{

@@ -62,7 +62,7 @@ $("#button").click(function (event) {
         var id = response.id
         localStorage.setItem('user', response)
         localStorage.setItem('userid', id)
-        window.location.href = "/Main-page/index.html"
+        window.location.href = "/index.html"
       });
   } else if (index_reg == 1) {
     $.getJSON(
