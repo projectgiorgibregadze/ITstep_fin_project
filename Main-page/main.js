@@ -225,11 +225,11 @@ $('#firstpicdot').click(
       )
       $('#comnumb').click(
         function () {
-          window.location.href='/Main_page/add/comment.html'
+          window.location.href='/Main-page/add/comment.html'
         }
       )
       $('#loldad').click(
         function () {
-          window.location.href='/Main_page/add/comments/main.html'
+          window.location.href='/Main-page/add/comments/main.html'
         }
       )
