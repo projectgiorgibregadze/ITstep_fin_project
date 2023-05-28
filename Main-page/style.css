@@ -759,9 +759,8 @@ footer{
 
 @media screen and (min-width: 1440px) {
   body {
-    position: absolute;
-
-    right: 23vw; 
+    position: static;
+    margin: 0px auto
   }
 }
 
@@ -821,7 +820,7 @@ footer{
   }
   #leftside4{
     display: inline;
-    margin-left: 12vw;
+    margin-left: 25vw;
   }
   #rightside4{
     display: inline;
@@ -1004,7 +1003,8 @@ margin: 0px auto;
 
   }
   #sub{
-    margin-left: 35vw;
+    position: static;
+    margin: 0px auto;
   }
 }
 @media screen and (max-width:1263px){

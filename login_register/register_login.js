@@ -36,7 +36,7 @@ $("#forgot").click(function () {
 
 $("#button").click(function (event) {
   event.preventDefault();
-  $.getJSON("http://kketelauri-001-site1.gtempurl.com/api/user/getuser",
+  $.getJSON("https://kketelauri-001-site1.gtempurl.com/api/user/getuser",
     function (data) {
       console.log(data)
     }
@@ -45,7 +45,7 @@ $("#button").click(function (event) {
     var email = $('#Emailplace').val()
     var pass =$('#passplace').val()
     console.log('1312')
-    fetch("http://kketelauri-001-site1.gtempurl.com/api/user/Login", {
+    fetch("https://kketelauri-001-site1.gtempurl.com/api/user/Login", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -66,7 +66,7 @@ $("#button").click(function (event) {
       });
   } else if (index_reg == 1) {
     $.getJSON(
-      "http://kketelauri-001-site1.gtempurl.com/api/user/getuser",
+      "https://kketelauri-001-site1.gtempurl.com/api/user/getuser",
       function (data) {
         var value = $("#Emailplace").val();
         var length = value.length;
@@ -217,7 +217,7 @@ $("#button").click(function (event) {
           } else if (length <= 8) {
             $("#requirements").html("Password Must Be 8 Letters Long");
           } else {
-            fetch('http://kketelauri-001-site1.gtempurl.com/api/user/adduser', {
+            fetch('https://kketelauri-001-site1.gtempurl.com/api/user/adduser', {
               method: '',
               headers: {
                   'Accept': 'application/json',
