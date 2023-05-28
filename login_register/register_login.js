@@ -1,6 +1,9 @@
 var emailFound = false;
 let index_reg = 0;
 let index_code = 0;
+var locmail =''
+var locpas=''
+var userId
 let forgot_mail = "";
 let index_login = 0;
 $("#forgot").click(function () {
@@ -36,11 +39,7 @@ $("#forgot").click(function () {
 
 $("#button").click(function (event) {
   event.preventDefault();
-  $.getJSON("https://kketelauri-001-site1.gtempurl.com/api/user/getuser",
-    function (data) {
-      console.log(data)
-    }
-  );
+
   if (index_login == 0) {
     var email = $('#Emailplace').val()
     var pass =$('#passplace').val()
@@ -58,10 +57,6 @@ $("#button").click(function (event) {
     })
       .then((response) => response.json())
       .then((response) =>{
-        var user= response
-        var id = response.id
-        localStorage.setItem('user', response)
-        localStorage.setItem('userid', id)
         window.location.href = "/index.html"
       });
   } else if (index_reg == 1) {
@@ -112,7 +107,7 @@ $("#button").click(function (event) {
                 }
               )
                 .then((response) => response.json())
-                .then((response) => console.log(JSON.stringify(response)));
+                .then((response) => console.log(2));
             } else {
               $("#errortext").html("Passwords Are Not Same");
               $("#Errordiv").removeClass("display");
@@ -142,9 +137,34 @@ $("#button").click(function (event) {
     );
   } else if (index_code == 1) {
     $.getJSON("data.json", function (data) {
-      const existingemail = data.users.map((user) => user.mail);
+      const existingEmails = data.users.map((user) => user.mail);
       var codemail = $("#Emailplace").val();
-      if (existingemail.includes(codemail)) {
+      if (existingEmails.includes(codemail)) {
+        async function fetchIdByEmail(email) {
+          const apiUrl = 'https://kketelauri-001-site1.gtempurl.com/api/user/getuser'; 
+          try {
+            const response = await $.getJSON(apiUrl, { email: email });
+            const id = response.id;
+            return id;
+          } catch (error) {
+            console.log('Error fetching ID:', error);
+            return null;
+          }
+        }
+        fetchIdByEmail(codemail)
+          .then((id) => {
+            if (id) {
+              console.log('Matched ID:', id);
+              locmail=codemail
+              userId=id
+            } else {
+              console.log('ID not found');
+            }
+          })
+          .catch((error) => {
+            console.log('Error:', error);
+          });
+  
         $("#errortext").html("Check Your Mail");
         $("#Errordiv").removeClass("display");
         setTimeout(function () {
@@ -217,23 +237,23 @@ $("#button").click(function (event) {
           } else if (length <= 8) {
             $("#requirements").html("Password Must Be 8 Letters Long");
           } else {
-            fetch('https://kketelauri-001-site1.gtempurl.com/api/user/adduser', {
-              method: '',
+            const updatedUserData = {
+              email: locmail,
+              password: val
+              // Add other properties you want to update
+            };
+            fetch(`https://kketelauri-001-site1.gtempurl.com/api/user/updateuser/`+userId, {
+              method: 'PUT',
               headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ 
-                  "userName": "keti4",
-              "firstName": "keti4",
-              "lastName": "ketelauri4",
-              "email": "keti4@gmail.com",
-              "privateNumber": "12345678914",
-              "password": "123",
-              "active": true})
-          })
-             .then(response => response.json())
-             .then(response => console.log(JSON.stringify(response)))
+              body: JSON.stringify(updatedUserData),
+            })
+              .then(response => response.json())
+              .then(data => {
+                console.log('User updated:', data);
+
+              })
           }
         }
       });
