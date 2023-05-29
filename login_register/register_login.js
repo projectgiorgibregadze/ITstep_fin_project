@@ -1,11 +1,12 @@
+// ცვლადები
 var emailFound = false;
 let index_reg = 0;
-let index_code = 0;
-var locmail =''
-var locpas=''
+
+
 var userId
 let forgot_mail = "";
 let index_login = 0;
+// ღილაკის ცვლილება და დიზანის 
 $("#forgot").click(function () {
   if (index_reg == 1) {
     $("#passplace2").remove();
@@ -36,11 +37,12 @@ $("#forgot").click(function () {
     $("#second_div").show();
   }
 });
-
+// რეგისტრაციისა და ლოგინის ასევე პაროლის განახლების ფუნქცია
 $("#button").click(function (event) {
   event.preventDefault();
 
   if (index_login == 0) {
+    // ლოგინის ფუნქცია
     var email = $('#Emailplace').val()
     var pass =$('#passplace').val()
     console.log('1312')
@@ -57,9 +59,12 @@ $("#button").click(function (event) {
     })
       .then((response) => response.json())
       .then((response) =>{
+        localStorage.setItem("apiData", JSON.stringify(response));
+        console.log(response)
         window.location.href = "/index.html"
       });
   } else if (index_reg == 1) {
+    // რეგისტრაციის ფუნქცია
     $.getJSON(
       "https://kketelauri-001-site1.gtempurl.com/api/user/getuser",
       function (data) {
@@ -135,131 +140,8 @@ $("#button").click(function (event) {
         }
       }
     );
-  } else if (index_code == 1) {
-    $.getJSON("data.json", function (data) {
-      const existingEmails = data.users.map((user) => user.mail);
-      var codemail = $("#Emailplace").val();
-      if (existingEmails.includes(codemail)) {
-        async function fetchIdByEmail(email) {
-          const apiUrl = 'https://kketelauri-001-site1.gtempurl.com/api/user/getuser'; 
-          try {
-            const response = await $.getJSON(apiUrl, { email: email });
-            const id = response.id;
-            return id;
-          } catch (error) {
-            console.log('Error fetching ID:', error);
-            return null;
-          }
-        }
-        fetchIdByEmail(codemail)
-          .then((id) => {
-            if (id) {
-              console.log('Matched ID:', id);
-              locmail=codemail
-              userId=id
-            } else {
-              console.log('ID not found');
-            }
-          })
-          .catch((error) => {
-            console.log('Error:', error);
-          });
-  
-        $("#errortext").html("Check Your Mail");
-        $("#Errordiv").removeClass("display");
-        setTimeout(function () {
-          $("#Errordiv").addClass("slide-out");
-          $("#Errordiv").removeClass("slide-in");
-          setTimeout(function () {
-            $("#Errordiv").removeClass("slide-out");
-            $("#Errordiv").addClass("display");
-          }, 500);
-        }, 2000);
-        setTimeout(function () {
-          $("#Emailplace").val("");
-          $("#Emailplace").prop("placeholder", "Input Your Code Here");
-          $("#button").html("Submit");
-          index_code = 2;
-          forgot_mail = codemail;
-        }, 10);
-      } else if ($("#Emailplace").val() == "") {
-        $("#errortext").html("Input Your Email");
-        $("#Errordiv").removeClass("display");
-        setTimeout(function () {
-          $("#Errordiv").addClass("slide-out");
-          $("#Errordiv").removeClass("slide-in");
-          setTimeout(function () {
-            $("#Errordiv").removeClass("slide-out");
-            $("#Errordiv").addClass("display");
-          }, 500);
-        }, 2000);
-      } else {
-        $("#errortext").html("Wrong Email");
-        $("#Errordiv").removeClass("display");
-        setTimeout(function () {
-          $("#Errordiv").addClass("slide-out");
-          $("#Errordiv").removeClass("slide-in");
-          setTimeout(function () {
-            $("#Errordiv").removeClass("slide-out");
-            $("#Errordiv").addClass("display");
-          }, 500);
-        }, 2000);
-      }
-    });
-  } else if (index_code == 2) {
-    $("#Emailplace").prop("type", "text");
-    $("#button").click(function (event) {
-      event.preventDefault();
-      $.getJSON("code.json", function (data) {
-        const testcode = data.code.map((code) => code.examplecode);
-        if (testcode.includes($("#Emailplace").val())) {
-          $("#Emailplace").prop("placeholder", "Input Your New Password");
-          $("#Emailplace").after('<p id="requirements"></p>');
-          $("#Emailplace").val("");
-          index_code = 3;
-        } else if (index_code == 2) {
-          $("#errortext").html("Invalid Code");
-          $("#Errordiv").removeClass("display");
-          setTimeout(function () {
-            $("#Errordiv").addClass("slide-out");
-            $("#Errordiv").removeClass("slide-in");
-            setTimeout(function () {
-              $("#Errordiv").removeClass("slide-out");
-              $("#Errordiv").addClass("display");
-            }, 500);
-          }, 2000);
-        } else if (index_code == 3) {
-          event.preventDefault();
-          var val = $("#Emailplace").val();
-          var length = val.length;
-          if (length == 0) {
-            $("#requirements").html("Write down something");
-          } else if (length <= 8) {
-            $("#requirements").html("Password Must Be 8 Letters Long");
-          } else {
-            const updatedUserData = {
-              email: locmail,
-              password: val
-              // Add other properties you want to update
-            };
-            fetch(`https://kketelauri-001-site1.gtempurl.com/api/user/updateuser/`+userId, {
-              method: 'PUT',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(updatedUserData),
-            })
-              .then(response => response.json())
-              .then(data => {
-                console.log('User updated:', data);
-
-              })
-          }
-        }
+  } 
       });
-    });
-  }
-});
 
 $("#second_div").click(function () {
   if (index_reg == 0 && index_code == 0 && index_login == 0) {
